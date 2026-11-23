@@ -1,0 +1,1425 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海角姐姐的小飞棍 - 官方品牌_趣味短片与手工创作社区</title>
+  <meta name="description" content="海角姐姐的小飞棍官方网站，专注微缩模型、手工飞行器与趣味短片的原创视频社区。海角姐姐的小飞棍品牌以匠心创作陪伴成长，持续输出高清精品内容。">
+  <meta name="theme-color" content="#2a3f54">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232a3f54'/%3E%3Cpath d='M18 40 L32 12 L46 40 L32 32 Z' fill='%23f4a261'/%3E%3Ccircle cx='32' cy='42' r='5' fill='%23e76f51'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --hj-navy: #1f3347;
+      --hj-teal: #2a6f6f;
+      --hj-sand: #f6efe6;
+      --hj-amber: #e09f3e;
+      --hj-coral: #d95d39;
+      --hj-mist: #f4f8f7;
+      --hj-ink: #1d2b36;
+      --hj-line: #d5dde2;
+      --hj-radius: 24px;
+      --hj-shadow: 0 22px 40px -24px rgba(19, 45, 55, 0.4);
+      --hj-font: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--hj-font);
+      background: var(--hj-sand);
+      color: var(--hj-ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    .hj-sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--hj-navy);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+    .hj-announce-bar {
+      background: linear-gradient(90deg, #1e4a4a, #2a6f6f 55%, #3a8a7a);
+      color: #f8fdfb;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .hj-announce-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hj-announce-tag {
+      background: var(--hj-amber);
+      color: var(--hj-navy);
+      font-weight: 700;
+      font-size: 0.72rem;
+      padding: 2px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.8px;
+    }
+    .hj-announce-inner p { flex: 1 1 240px; font-weight: 400; }
+    .hj-announce-link {
+      color: #ffd699;
+      border-bottom: 1px dashed #ffd699;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .hj-site-header {
+      background: var(--hj-navy);
+      color: #fff;
+    }
+    .hj-header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .hj-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+    .hj-brand-logo svg { width: 38px; height: 38px; }
+    .hj-nav-toggle {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      gap: 6px;
+      align-items: center;
+    }
+    .hj-main-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-weight: 500;
+      font-size: 0.94rem;
+    }
+    .hj-main-nav a { opacity: 0.85; transition: opacity 0.2s, color 0.2s; padding: 6px 0; border-bottom: 2px solid transparent; }
+    .hj-main-nav a:hover { opacity: 1; color: #ffd699; border-bottom-color: #ffd699; }
+    .hj-header-search {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      padding: 4px 6px 4px 16px;
+      gap: 6px;
+      min-width: 220px;
+    }
+    .hj-header-search input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 6px 0;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+    .hj-header-search input::placeholder { color: rgba(255,255,255,0.55); }
+    .hj-search-btn {
+      background: var(--hj-amber);
+      color: var(--hj-navy);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .hj-search-btn:hover { background: #f0b860; }
+
+    .hj-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hj-section {
+      padding: 64px 0;
+      scroll-margin-top: 130px;
+    }
+    .hj-section-alt {
+      background: var(--hj-mist);
+    }
+    .hj-section-head {
+      margin-bottom: 34px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .hj-eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 2.6px;
+      color: var(--hj-teal);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .hj-section-title {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+    }
+    .hj-section-desc {
+      max-width: 540px;
+      color: #4b5d68;
+      font-size: 0.96rem;
+    }
+
+    .hj-hero {
+      background: linear-gradient(145deg, #f6efe6 0%, #e8f1ef 100%);
+      padding: 56px 0 40px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hj-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 5fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .hj-hero-copy .hj-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffffb8;
+      border: 1px solid #a7c6c0;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 5px 14px;
+      color: var(--hj-teal);
+      margin-bottom: 18px;
+    }
+    .hj-hero-copy h1 {
+      font-size: clamp(2.4rem, 5vw, 3.7rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: var(--hj-navy);
+      margin-bottom: 16px;
+    }
+    .hj-hero-copy h1 span { color: var(--hj-coral); }
+    .hj-hero-slogan {
+      font-size: 1.12rem;
+      color: #3e5964;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--hj-amber);
+      padding-left: 16px;
+      font-weight: 500;
+    }
+    .hj-hero-about {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(2px);
+      border-radius: 18px;
+      padding: 18px 20px;
+      font-size: 0.92rem;
+      color: #31444d;
+      border: 1px solid #ffffff;
+      margin-bottom: 26px;
+    }
+    .hj-hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .hj-hero-stat strong {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--hj-navy);
+      display: block;
+      line-height: 1.2;
+    }
+    .hj-hero-stat span {
+      font-size: 0.8rem;
+      color: #506670;
+    }
+    .hj-hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .hj-btn-primary {
+      background: var(--hj-coral);
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.94rem;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 8px 18px -8px #d95d3988;
+    }
+    .hj-btn-primary:hover { background: #bf4a2c; transform: translateY(-2px); }
+    .hj-btn-outline {
+      background: transparent;
+      border: 2px solid var(--hj-navy);
+      color: var(--hj-navy);
+      padding: 10px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.94rem;
+      transition: background 0.2s, color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hj-btn-outline:hover { background: var(--hj-navy); color: #fff; }
+    .hj-hero-visual {
+      position: relative;
+      border-radius: 42px 16px 42px 16px;
+      overflow: hidden;
+      box-shadow: var(--hj-shadow);
+      aspect-ratio: 4/3.4;
+    }
+    .hj-hero-visual svg { width: 100%; height: 100%; object-fit: cover; }
+
+    .hj-focus-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: stretch;
+    }
+    .hj-focus-main {
+      background: #fff;
+      border-radius: var(--hj-radius);
+      overflow: hidden;
+      box-shadow: var(--hj-shadow);
+    }
+    .hj-focus-main-visual {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+    .hj-focus-main-visual svg { width: 100%; height: 100%; }
+    .hj-focus-main-body { padding: 22px 24px 26px; }
+    .hj-focus-main-body h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 8px; }
+    .hj-focus-main-body p { color: #4b5d68; font-size: 0.92rem; margin-bottom: 14px; }
+    .hj-tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+    .hj-tag {
+      background: #e8f1ef;
+      color: var(--hj-teal);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 999px;
+    }
+    .hj-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.78rem;
+      color: #6e818b;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .hj-action-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .hj-like-btn, .hj-fav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.85rem;
+      color: #556b76;
+      transition: color 0.2s;
+    }
+    .hj-like-btn:hover, .hj-fav-btn:hover { color: var(--hj-coral); }
+    .hj-fav-btn .hj-fav-icon { transition: transform 0.2s; }
+    .hj-fav-btn.is-fav { color: var(--hj-coral); }
+    .hj-fav-btn.is-fav .hj-fav-icon { transform: scale(1.15); }
+    .hj-focus-side {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .hj-focus-side-item {
+      background: #fff;
+      border-radius: 20px;
+      padding: 18px 20px;
+      box-shadow: 0 6px 18px -10px #203a4433;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hj-focus-side-item:hover { transform: translateY(-3px); box-shadow: 0 14px 24px -12px #1f334755; }
+    .hj-side-thumb {
+      width: 84px;
+      flex-shrink: 0;
+      aspect-ratio: 16/10;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .hj-side-thumb svg { width: 100%; height: 100%; }
+    .hj-side-body h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .hj-side-body p { font-size: 0.8rem; color: #5d6f78; margin-bottom: 8px; }
+
+    .hj-video-list { display: flex; flex-direction: column; gap: 20px; }
+    .hj-video-item {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px 24px;
+      box-shadow: 0 6px 18px -12px #1f334744;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .hj-video-item:hover { box-shadow: 0 12px 28px -14px #1f334766; }
+    .hj-video-info h3 { font-size: 1.12rem; font-weight: 800; margin-bottom: 4px; }
+    .hj-video-info p { font-size: 0.86rem; color: #566b76; margin-bottom: 8px; }
+    .hj-video-footer { display: flex; align-items: center; gap: 16px; font-size: 0.78rem; color: #7a8d97; flex-wrap: wrap; }
+    .hj-video-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hj-video-tag { background: #eef6f4; padding: 2px 10px; border-radius: 999px; color: #2a6f6f; }
+
+    .hj-topic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .hj-topic-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 26px 24px;
+      box-shadow: 0 8px 20px -14px #1f334744;
+      border-top: 5px solid var(--hj-teal);
+      transition: transform 0.2s;
+    }
+    .hj-topic-card:hover { transform: translateY(-4px); }
+    .hj-topic-status {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: #fef6e6;
+      color: #b57a1e;
+      padding: 3px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .hj-topic-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .hj-topic-card p { font-size: 0.86rem; color: #5a707b; margin-bottom: 14px; }
+    .hj-topic-items { font-size: 0.82rem; color: #41545e; }
+    .hj-topic-items li { padding: 7px 0; border-bottom: 1px dashed #d5e2e0; display: flex; gap: 8px; align-items: baseline; }
+    .hj-topic-items li:last-child { border-bottom: none; }
+    .hj-topic-dot { width: 6px; height: 6px; background: var(--hj-amber); border-radius: 50%; flex-shrink: 0; }
+
+    .hj-author-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+    }
+    .hj-author-card {
+      background: #fff;
+      border-radius: 26px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 10px 24px -18px #203a4477;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hj-author-card:hover { transform: translateY(-6px); box-shadow: 0 22px 34px -22px #1f334799; }
+    .hj-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #fff;
+      background: linear-gradient(135deg, #2a6f6f, #1f3347);
+    }
+    .hj-author-card:nth-child(2) .hj-avatar { background: linear-gradient(135deg, #e09f3e, #d95d39); }
+    .hj-author-card:nth-child(3) .hj-avatar { background: linear-gradient(135deg, #4a7c8c, #2f5d6b); }
+    .hj-author-card:nth-child(4) .hj-avatar { background: linear-gradient(135deg, #8a6f4d, #5e4b37); }
+    .hj-author-card h3 { font-size: 1.15rem; margin-bottom: 2px; }
+    .hj-author-field { font-size: 0.78rem; color: var(--hj-teal); font-weight: 600; margin-bottom: 10px; }
+    .hj-author-bio { font-size: 0.82rem; color: #566b76; margin-bottom: 12px; text-align: left; }
+    .hj-author-meta { display: flex; justify-content: center; gap: 18px; font-size: 0.76rem; color: #7a8d97; margin-bottom: 14px; }
+
+    .hj-rating-summary {
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      box-shadow: 0 8px 18px -14px #1f334755;
+    }
+    .hj-rating-big { font-size: 3rem; font-weight: 900; color: var(--hj-navy); line-height: 1; }
+    .hj-rating-stars { color: var(--hj-amber); letter-spacing: 2px; font-size: 1.2rem; }
+    .hj-rating-bars { flex: 1; min-width: 200px; }
+    .hj-rating-bar-row { display: flex; align-items: center; gap: 10px; font-size: 0.78rem; margin-bottom: 4px; }
+    .hj-rating-bar-track { flex: 1; height: 6px; background: #e2eae8; border-radius: 999px; overflow: hidden; }
+    .hj-rating-bar-fill { height: 100%; background: var(--hj-amber); border-radius: 999px; }
+
+    .hj-comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .hj-comment-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 20px 22px;
+      box-shadow: 0 8px 18px -16px #1f334766;
+      border-left: 4px solid var(--hj-teal);
+    }
+    .hj-comment-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .hj-comment-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #fff; font-size: 0.9rem;
+      background: linear-gradient(135deg, #2a6f6f, #1f3347);
+    }
+    .hj-comment-card:nth-child(even) .hj-comment-avatar { background: linear-gradient(135deg, #e09f3e, #c46a2b); }
+    .hj-comment-name { font-weight: 700; font-size: 0.9rem; }
+    .hj-comment-date { font-size: 0.7rem; color: #8fa1ab; }
+    .hj-comment-text { font-size: 0.86rem; color: #3e5964; }
+
+    .hj-faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 880px; margin: 0 auto; }
+    .hj-faq-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2px 0;
+      box-shadow: 0 4px 12px -10px #1f334755;
+      border: 1px solid #e7eeec;
+    }
+    .hj-faq-item summary {
+      padding: 16px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .hj-faq-item summary::-webkit-details-marker { display: none; }
+    .hj-faq-item summary::after { content: "＋"; color: var(--hj-teal); font-size: 1.1rem; }
+    .hj-faq-item[open] summary::after { content: "－"; }
+    .hj-faq-item[open] summary { color: var(--hj-teal); }
+    .hj-faq-item p { padding: 0 22px 18px; font-size: 0.88rem; color: #4b5d68; }
+
+    .hj-news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .hj-news-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 6px 16px -14px #1f334766;
+      border-bottom: 3px solid var(--hj-amber);
+    }
+    .hj-news-date { font-size: 0.72rem; color: #9aaab3; margin-bottom: 6px; }
+    .hj-news-card h3 { font-size: 1rem; margin-bottom: 6px; }
+    .hj-news-card p { font-size: 0.82rem; color: #5a707b; }
+
+    .hj-partner-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+    }
+    .hj-partner-item {
+      background: #ffffffb3;
+      border: 1px solid #cddbd8;
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #355a5a;
+    }
+
+    .hj-footer {
+      background: var(--hj-navy);
+      color: #bccdd6;
+      padding: 54px 0 30px;
+      font-size: 0.86rem;
+    }
+    .hj-footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 38px;
+      margin-bottom: 36px;
+    }
+    .hj-footer-brand h4 { color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
+    .hj-footer-brand p { max-width: 300px; }
+    .hj-footer-col h5 { color: #fff; font-size: 0.92rem; margin-bottom: 12px; letter-spacing: 0.4px; }
+    .hj-footer-col ul li { margin-bottom: 8px; }
+    .hj-footer-col a { opacity: 0.8; transition: opacity 0.2s; }
+    .hj-footer-col a:hover { opacity: 1; color: #ffd699; }
+    .hj-footer-bottom {
+      border-top: 1px solid #ffffff1a;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      color: #8fa7b4;
+    }
+
+    .hj-toast {
+      position: fixed;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: #1f3347;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 999;
+      box-shadow: 0 12px 28px -10px #0c171f;
+    }
+    .hj-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .hj-scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--hj-teal);
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 10px 22px -10px #1f3347;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 90;
+    }
+    .hj-scroll-top.show { opacity: 1; pointer-events: auto; }
+    .hj-scroll-top:hover { background: var(--hj-coral); transform: translateY(-3px); }
+
+    @media (max-width: 900px) {
+      .hj-hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hj-focus-grid { grid-template-columns: 1fr; }
+      .hj-footer-grid { grid-template-columns: 1fr 1fr; }
+      .hj-section { padding: 44px 0; }
+      .hj-nav-toggle { display: inline-flex; }
+      .hj-main-nav { display: none; width: 100%; }
+      .hj-main-nav.is-open { display: block; }
+      .hj-main-nav ul { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px 0 0; }
+      .hj-header-search { min-width: 0; width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .hj-container { padding: 0 16px; }
+      .hj-hero { padding: 34px 0 30px; }
+      .hj-hero-copy h1 { font-size: 2.1rem; }
+      .hj-footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .hj-video-item { grid-template-columns: 1fr; }
+      .hj-hero-stats { gap: 16px; }
+      .hj-announce-inner { font-size: 0.78rem; }
+      .hj-scroll-top { bottom: 18px; right: 18px; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="hj-sticky-wrap">
+  <div class="hj-announce-bar" role="region" aria-label="站内公告">
+    <div class="hj-announce-inner">
+      <span class="hj-announce-tag">官方发布</span>
+      <p>「小飞棍·海岸线飞行实验室」第二季 12 月 5 日上线，新增 6 支原创手工试飞短片。</p>
+      <a href="#hj-updates" class="hj-announce-link">查看更新详情 →</a>
+    </div>
+  </div>
+  <header class="hj-site-header">
+    <div class="hj-header-inner">
+      <a href="#" class="hj-brand-logo" aria-label="海角姐姐的小飞棍 品牌首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#e09f3e"/><path d="M18 40 L32 12 L46 40 L32 32 Z" fill="#1f3347"/><circle cx="32" cy="42" r="5" fill="#d95d39"/></svg>
+        海角姐姐的小飞棍
+      </a>
+      <button class="hj-nav-toggle" id="hjNavToggle" aria-expanded="false" aria-controls="hjMainNav">☰ 菜单</button>
+      <nav class="hj-main-nav" id="hjMainNav" aria-label="主导航">
+        <ul>
+          <li><a href="#hj-focus">焦点推荐</a></li>
+          <li><a href="#hj-videos">最新视频</a></li>
+          <li><a href="#hj-topics">专题企划</a></li>
+          <li><a href="#hj-creators">创作者</a></li>
+          <li><a href="#hj-reviews">口碑评价</a></li>
+          <li><a href="#hj-faq">常见问题</a></li>
+        </ul>
+      </nav>
+      <div class="hj-header-search">
+        <input type="search" id="hjSearchInput" placeholder="搜索视频、创作者、专题…" aria-label="站内搜索">
+        <button class="hj-search-btn" id="hjSearchBtn">搜索</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- S2 品牌首屏 -->
+<section class="hj-hero" id="hj-home">
+  <div class="hj-container">
+    <div class="hj-hero-grid">
+      <div class="hj-hero-copy">
+        <span class="hj-hero-badge">★ 官方品牌 · 原创视频社区</span>
+        <h1>海角姐姐的小飞棍</h1>
+        <p class="hj-hero-slogan">让每一次出手，都成为海岸线上的一次小小飞行。</p>
+        <p class="hj-hero-about">
+          海角姐姐的小飞棍官方网站是面向手工飞行器爱好者与微缩模型创作者的企业级视频平台。我们深耕趣味短片与手工飞行器领域，持续为用户提供高清原创内容与可信赖的创作服务。品牌以匠心打磨每一帧画面，用社区连接每一位热爱飞行的你，打造多元、包容、温暖的内容生态。
+        </p>
+        <div class="hj-hero-stats">
+          <div class="hj-hero-stat"><strong>1,860+</strong><span>原创短片累计</span></div>
+          <div class="hj-hero-stat"><strong>42.6万</strong><span>社区创作者关注</span></div>
+          <div class="hj-hero-stat"><strong>98.7%</strong><span>用户口碑好评率</span></div>
+        </div>
+        <div class="hj-hero-actions">
+          <a href="#hj-videos" class="hj-btn-primary">▶ 观看最新视频</a>
+          <a href="#hj-creators" class="hj-btn-outline">认识创作者</a>
+          <button class="hj-btn-outline" id="hjSubmitEntry">✎ 我要投稿</button>
+        </div>
+      </div>
+      <div class="hj-hero-visual">
+        <svg viewBox="0 0 640 560" role="img" aria-label="海角姐姐的小飞棍品牌主视觉：海岸线上飞行的手工小飞棍">
+          <defs>
+            <linearGradient id="hjSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#bfe0d9"/>
+              <stop offset="60%" stop-color="#e8f1ef"/>
+              <stop offset="100%" stop-color="#f6efe6"/>
+            </linearGradient>
+            <linearGradient id="hjSea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#5f9d9d"/>
+              <stop offset="100%" stop-color="#2a6f6f"/>
+            </linearGradient>
+            <linearGradient id="hjStick" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e09f3e"/>
+              <stop offset="100%" stop-color="#d95d39"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="560" fill="url(#hjSky)"/>
+          <circle cx="500" cy="120" r="68" fill="#f7d9a0" opacity="0.85"/>
+          <circle cx="500" cy="120" r="46" fill="#ffe8b0"/>
+          <path d="M0 380 Q120 340 240 370 T480 360 T640 380 L640 560 L0 560 Z" fill="url(#hjSea)"/>
+          <path d="M0 400 Q160 370 320 395 T640 400 L640 560 L0 560 Z" fill="#1f4f4f" opacity="0.5"/>
+          <path d="M380 210 L470 340 L390 310 Z" fill="url(#hjStick)" opacity="0.95"/>
+          <path d="M380 210 L460 190 L450 260 Z" fill="#f0c780"/>
+          <circle cx="380" cy="210" r="14" fill="#1f3347"/>
+          <circle cx="380" cy="210" r="6" fill="#ffe8b0"/>
+          <path d="M360 280 Q330 300 300 320" stroke="#d95d39" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M395 300 Q420 330 440 370" stroke="#e09f3e" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+          <path d="M60 470 Q180 450 300 470 T560 460" stroke="#ffffff88" stroke-width="3" fill="none"/>
+          <path d="M110 500 Q230 485 350 500 T600 490" stroke="#ffffff66" stroke-width="2" fill="none"/>
+          <circle cx="150" cy="150" r="3" fill="#fff" opacity="0.7"/>
+          <circle cx="230" cy="100" r="2" fill="#fff" opacity="0.6"/>
+          <circle cx="300" cy="170" r="2.5" fill="#fff" opacity="0.5"/>
+          <circle cx="420" cy="80" r="2" fill="#fff" opacity="0.6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容 + 视频流 -->
+<section class="hj-section" id="hj-focus">
+  <div class="hj-container">
+    <div class="hj-section-head">
+      <div>
+        <div class="hj-eyebrow">焦点推荐 · 本周精选</div>
+        <h2 class="hj-section-title">海角姐姐的小飞棍原创精品内容</h2>
+      </div>
+      <p class="hj-section-desc">从飞行试验到创作幕后，官方发布每一支值得反复观看的高清短片。</p>
+    </div>
+    <div class="hj-focus-grid">
+      <article class="hj-focus-main">
+        <div class="hj-focus-main-visual">
+          <svg viewBox="0 0 800 450" role="img" aria-label="焦点视频封面：海岸风场中的小飞棍试飞记录">
+            <defs>
+              <linearGradient id="hjFocusSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#cfe6e0"/>
+                <stop offset="100%" stop-color="#f4efe3"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="450" fill="url(#hjFocusSky)"/>
+            <circle cx="630" cy="110" r="56" fill="#f7d9a0" opacity="0.8"/>
+            <path d="M0 320 Q180 280 360 310 T800 300 L800 450 L0 450 Z" fill="#2a6f6f"/>
+            <path d="M0 350 Q200 330 400 345 T800 350 L800 450 L0 450 Z" fill="#1f4f4f" opacity="0.6"/>
+            <path d="M400 180 L480 300 L410 270 Z" fill="#e09f3e"/>
+            <path d="M400 180 L460 160 L455 225 Z" fill="#f0c780"/>
+            <circle cx="400" cy="180" r="12" fill="#1f3347"/>
+            <path d="M320 250 Q360 230 420 260" stroke="#d95d39" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="260" cy="170" r="3" fill="#fff" opacity="0.6"/>
+            <circle cx="520" cy="90" r="2" fill="#fff" opacity="0.6"/>
+            <circle cx="340" cy="80" r="2.5" fill="#fff" opacity="0.5"/>
+            <rect x="40" y="40" width="120" height="28" rx="14" fill="#1f3347" opacity="0.7"/>
+            <text x="100" y="59" font-size="12" fill="#fff" text-anchor="middle" font-family="sans-serif">本期焦点</text>
+          </svg>
+        </div>
+        <div class="hj-focus-main-body">
+          <div class="hj-tag-row">
+            <span class="hj-tag">飞行试验</span>
+            <span class="hj-tag">高清原创</span>
+            <span class="hj-tag">海岸线</span>
+          </div>
+          <h3>海岸风场：小飞棍 8 号机抗风试飞全记录</h3>
+          <p>海角姐姐的小飞棍团队在冬季海岸线完成 8 号机型的第 12 次抗风测试。从滑翔角度调整到配重块位置，本片完整呈现了 8 号机从组装到连续 6 次成功飞行的全过程，并附详细数据复盘。</p>
+          <div class="hj-meta-row">
+            <span>作者：海角姐姐</span>
+            <span>播放 12.8万</span>
+            <span>点赞 2.4万</span>
+            <span>收藏 9,860</span>
+          </div>
+          <div class="hj-action-row">
+            <button class="hj-like-btn" data-like="focus" data-base="24000" aria-label="点赞焦点视频">👍 <span class="hj-like-count">2.4万</span></button>
+            <button class="hj-fav-btn" data-fav="focus" aria-label="收藏焦点视频">♡ <span class="hj-fav-icon">收藏</span></button>
+            <button class="hj-copy-btn" data-copy="https://example.com/focus" aria-label="复制焦点视频链接">🔗 复制链接</button>
+          </div>
+        </div>
+      </article>
+      <div class="hj-focus-side">
+        <article class="hj-focus-side-item">
+          <div class="hj-side-thumb">
+            <svg viewBox="0 0 160 100" role="img" aria-label="侧栏视频缩略图：小飞棍零件台面整理">
+              <rect width="160" height="100" fill="#e3ece8"/>
+              <rect x="18" y="52" width="60" height="8" rx="4" fill="#e09f3e"/>
+              <rect x="36" y="34" width="8" height="50" rx="4" fill="#d95d39"/>
+              <circle cx="110" cy="42" r="16" fill="#2a6f6f"/>
+              <circle cx="110" cy="42" r="8" fill="#f0c780"/>
+            </svg>
+          </div>
+          <div class="hj-side-body">
+            <h4>从零件到起飞：我的桌面飞行工坊</h4>
+            <p>工具清单与收纳方法，新手一次看懂。</p>
+            <button class="hj-like-btn" data-like="side1" data-base="5600" aria-label="点赞桌面工坊视频">👍 <span class="hj-like-count">5,600</span></button>
+          </div>
+        </article>
+        <article class="hj-focus-side-item">
+          <div class="hj-side-thumb">
+            <svg viewBox="0 0 160 100" role="img" aria-label="侧栏视频缩略图：小飞棍色彩涂装特写">
+              <rect width="160" height="100" fill="#f4ebe0"/>
+              <path d="M30 70 L80 18 L130 70 L80 56 Z" fill="#2a6f6f"/>
+              <path d="M30 70 L80 18 L80 56 Z" fill="#3a8a7a"/>
+              <circle cx="80" cy="42" r="6" fill="#d95d39"/>
+            </svg>
+          </div>
+          <div class="hj-side-body">
+            <h4>涂装美学：给飞行器穿上海岸的颜色</h4>
+            <p>自然色系调色思路与喷涂安全要点。</p>
+            <button class="hj-like-btn" data-like="side2" data-base="4300" aria-label="点赞涂装视频">👍 <span class="hj-like-count">4,300</span></button>
+          </div>
+        </article>
+        <article class="hj-focus-side-item">
+          <div class="hj-side-thumb">
+            <svg viewBox="0 0 160 100" role="img" aria-label="侧栏视频缩略图：小飞棍亲子共创课堂">
+              <rect width="160" height="100" fill="#e0efe9"/>
+              <circle cx="52" cy="46" r="18" fill="#e09f3e"/>
+              <circle cx="100" cy="54" r="14" fill="#d95d39"/>
+              <path d="M76 74 L92 34 L110 74 Z" fill="#1f3347" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="hj-side-body">
+            <h4>亲子共创：和孩子一起做一支会飞的小棍</h4>
+            <p>安全材料与 30 分钟上手流程。</p>
+            <button class="hj-like-btn" data-like="side3" data-base="3800" aria-label="点赞亲子共创视频">👍 <span class="hj-like-count">3,800</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hj-section hj-section-alt" id="hj-videos">
+  <div class="hj-container">
+    <div class="hj-section-head">
+      <div>
+        <div class="hj-eyebrow">最新视频 · 持续更新</div>
+        <h2 class="hj-section-title">海角姐姐的小飞棍视频流</h2>
+      </div>
+      <p class="hj-section-desc">每周更新原创短片，涵盖教程、试飞、访谈与幕后记录。</p>
+    </div>
+    <div class="hj-video-list">
+      <article class="hj-video-item">
+        <div class="hj-video-info">
+          <div class="hj-tag-row"><span class="hj-video-tag">教程干货</span><span class="hj-video-tag">新手友好</span></div>
+          <h3>新手第一课：如何挑选你的第一支小飞棍</h3>
+          <p>从材质、重量到翼展比例，海角姐姐手把手讲解入门选购逻辑，附常见踩坑清单。</p>
+          <div class="hj-video-footer">
+            <span>作者：海角姐姐</span><span>播放 8.6万</span><span>点赞 1.2万</span><span>收藏 6,420</span>
+          </div>
+        </div>
+        <div class="hj-video-actions">
+          <button class="hj-like-btn" data-like="v1" data-base="12000" aria-label="点赞新手第一课">👍 <span class="hj-like-count">1.2万</span></button>
+          <button class="hj-fav-btn" data-fav="v1" aria-label="收藏新手第一课">♡ <span class="hj-fav-icon">收藏</span></button>
+          <button class="hj-comment-btn" data-comment="v1" aria-label="展开新手第一课评论">💬 评论</button>
+        </div>
+      </article>
+      <article class="hj-video-item">
+        <div class="hj-video-info">
+          <div class="hj-tag-row"><span class="hj-video-tag">深度测评</span><span class="hj-video-tag">数据复盘</span></div>
+          <h3>4 款配重方案横评：哪种小飞棍飞得更稳？</h3>
+          <p>在相同风速下对比 4 种配重布局的滞空时间与滑翔距离，用实测数据告诉你答案。</p>
+          <div class="hj-video-footer">
+            <span>作者：风羽实验室</span><span>播放 6.3万</span><span>点赞 9,800</span><span>收藏 5,100</span>
+          </div>
+        </div>
+        <div class="hj-video-actions">
+          <button class="hj-like-btn" data-like="v2" data-base="9800" aria-label="点赞配重方案横评">👍 <span class="hj-like-count">9,800</span></button>
+          <button class="hj-fav-btn" data-fav="v2" aria-label="收藏配重方案横评">♡ <span class="hj-fav-icon">收藏</span></button>
+          <button class="hj-comment-btn" data-comment="v2" aria-label="展开配重方案横评评论">💬 评论</button>
+        </div>
+      </article>
+      <article class="hj-video-item">
+        <div class="hj-video-info">
+          <div class="hj-tag-row"><span class="hj-video-tag">创作幕后</span><span class="hj-video-tag">团队日常</span></div>
+          <h3>一支短片的诞生：从分镜草稿到海岸实拍</h3>
+          <p>跟拍海角姐姐的小飞棍创作小组 3 天，记录镜头设计、机位安排与现场临场调整。</p>
+          <div class="hj-video-footer">
+            <span>作者：小棍剪辑室</span><span>播放 5.1万</span><span>点赞 7,600</span><span>收藏 3,980</span>
+          </div>
+        </div>
+        <div class="hj-video-actions">
+          <button class="hj-like-btn" data-like="v3" data-base="7600" aria-label="点赞创作幕后视频">👍 <span class="hj-like-count">7,600</span></button>
+          <button class="hj-fav-btn" data-fav="v3" aria-label="收藏创作幕后视频">♡ <span class="hj-fav-icon">收藏</span></button>
+          <button class="hj-comment-btn" data-comment="v3" aria-label="展开创作幕后评论">💬 评论</button>
+        </div>
+      </article>
+      <article class="hj-video-item">
+        <div class="hj-video-info">
+          <div class="hj-tag-row"><span class="hj-video-tag">人物访谈</span><span class="hj-video-tag">社区故事</span></div>
+          <h3>对话老航模人：他收藏了 30 支小飞棍</h3>
+          <p>63 岁的陈叔带来他的收藏盒，讲述 30 年间与飞行器有关的生活片段与社区记忆。</p>
+          <div class="hj-video-footer">
+            <span>作者：海角姐姐</span><span>播放 4.7万</span><span>点赞 6,900</span><span>收藏 3,200</span>
+          </div>
+        </div>
+        <div class="hj-video-actions">
+          <button class="hj-like-btn" data-like="v4" data-base="6900" aria-label="点赞老航模人访谈">👍 <span class="hj-like-count">6,900</span></button>
+          <button class="hj-fav-btn" data-fav="v4" aria-label="收藏老航模人访谈">♡ <span class="hj-fav-icon">收藏</span></button>
+          <button class="hj-comment-btn" data-comment="v4" aria-label="展开老航模人访谈评论">💬 评论</button>
+        </div>
+      </article>
+      <article class="hj-video-item">
+        <div class="hj-video-info">
+          <div class="hj-tag-row"><span class="hj-video-tag">治愈影像</span><span class="hj-video-tag">海岸日常</span></div>
+          <h3>日落飞行 5 分钟：跟随小飞棍看一次晚霞</h3>
+          <p>无对白纯影像记录。跟随小飞棍的第一视角，在冬季海岸线上安静地飞完整个黄昏。</p>
+          <div class="hj-video-footer">
+            <span>作者：慢镜小组</span><span>播放 3.9万</span><span>点赞 8,200</span><span>收藏 4,600</span>
+          </div>
+        </div>
+        <div class="hj-video-actions">
+          <button class="hj-like-btn" data-like="v5" data-base="8200" aria-label="点赞日落飞行视频">👍 <span class="hj-like-count">8,200</span></button>
+          <button class="hj-fav-btn" data-fav="v5" aria-label="收藏日落飞行视频">♡ <span class="hj-fav-icon">收藏</span></button>
+          <button class="hj-comment-btn" data-comment="v5" aria-label="展开日落飞行评论">💬 评论</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S4 专题企划 + 品牌故事 / 关键词解析 -->
+<section class="hj-section" id="hj-topics">
+  <div class="hj-container">
+    <div class="hj-section-head">
+      <div>
+        <div class="hj-eyebrow">专题企划 · 深度栏目</div>
+        <h2 class="hj-section-title">小飞棍品牌故事与深度解析</h2>
+      </div>
+      <p class="hj-section-desc">从一支小飞棍出发，了解品牌背后的匠心与社区温度。</p>
+    </div>
+
+    <div class="hj-topic-grid" style="margin-bottom:44px;">
+      <article class="hj-topic-card">
+        <span class="hj-topic-status">更新中 · 每周三</span>
+        <h3>专题一：海岸线飞行实验室</h3>
+        <p>跟拍不同风速与海岸地形下的试飞实验，以严谨态度记录每一次飞行数据与调整思路。</p>
+        <ul class="hj-topic-items">
+          <li><span class="hj-topic-dot"></span>冬季侧风条件下 6 号机滑翔角度测试</li>
+          <li><span class="hj-topic-dot"></span>沙滩着陆区的缓冲结构与落地姿态分析</li>
+          <li><span class="hj-topic-dot"></span>白天与黄昏光线的影像质感对照</li>
+        </ul>
+      </article>
+      <article class="hj-topic-card" style="border-top-color:var(--hj-amber);">
+        <span class="hj-topic-status">已完结 · 共 8 集</span>
+        <h3>专题二：一支小飞棍的 7 天</h3>
+        <p>从图纸到成品的完整手作记录，展示品牌对工艺与品质的坚持，适合慢节奏观看。</p>
+        <ul class="hj-topic-items">
+          <li><span class="hj-topic-dot"></span>第 1 天：木料选材与纹理观察</li>
+          <li><span class="hj-topic-dot"></span>第 4 天：打磨、配重与平衡校准</li>
+          <li><span class="hj-topic-dot"></span>第 7 天：涂装完成与首飞仪式</li>
+        </ul>
+      </article>
+      <article class="hj-topic-card" style="border-top-color:var(--hj-coral);">
+        <span class="hj-topic-status">开放征集中</span>
+        <h3>专题三：社区共创飞行挑战</h3>
+        <p>面向全体创作者征集「最稳的一次落地」主题短片，优秀作品将在官方频道展映。</p>
+        <ul class="hj-topic-items">
+          <li><span class="hj-topic-dot"></span>投稿截止：2026 年 12 月 20 日</li>
+          <li><span class="hj-topic-dot"></span>评审维度：飞行稳定性、创意与画面完成度</li>
+          <li><span class="hj-topic-dot"></span>入选作品获得官方流量扶持与周边礼盒</li>
+        </ul>
+      </article>
+    </div>
+
+    <div style="background:#fff;border-radius:28px;padding:40px 36px;box-shadow:var(--hj-shadow);">
+      <h2 style="font-size:1.7rem;font-weight:800;margin-bottom:20px;">关于海角姐姐的小飞棍：从一支小棍到社区生态</h2>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;" class="hj-about-split">
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:8px;color:var(--hj-teal);">品牌缘起：海角边的第一支小飞棍</h3>
+          <p style="font-size:0.9rem;color:#4b5d68;margin-bottom:18px;">
+            最早只是海角姐姐在自家工作台上的一支木制小飞棍。2019 年冬，她把试飞过程拍成短片发布，意外收到大量手工爱好者的询问。此后，海角姐姐的小飞棍逐步从个人创作站点成长为拥有独立内容体系与社区规则的企业级视频品牌。官网持续记录每一阶段迭代，从机翼弧度到配色方案，都留有公开可查的版本档案。
+          </p>
+          <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:8px;color:var(--hj-teal);">社区生态：让创作者被看见</h3>
+          <p style="font-size:0.9rem;color:#4b5d68;margin-bottom:18px;">
+            海角姐姐的小飞棍社区坚持原创与正版导向，所有投稿需经内容审核与创作声明。我们为新手提供「第一次投稿」引导，为成熟创作者准备季度展映计划，并通过口碑推荐机制让优质作品获得更多曝光。平台持续运营的专题栏目，让不同阶段的创作者都能找到适合自己的表达方式。
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:8px;color:var(--hj-teal);">品牌理念：真实、温暖、持续陪伴</h3>
+          <p style="font-size:0.9rem;color:#4b5d68;margin-bottom:18px;">
+            在海角姐姐的小飞棍的创作观里，飞行不是竞赛，而是一种与自然、与生活对话的方式。品牌以真实记录为底色，拒绝过度包装，在短片里保留风的声音、手的温度与失败重来的片段。我们希望这些影像能陪伴每一位观众，在快节奏日常里获得片刻松弛与继续尝试的勇气。
+          </p>
+          <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:8px;color:var(--hj-teal);">品质与责任：企业级内容标准</h3>
+          <p style="font-size:0.9rem;color:#4b5d68;">
+            作为深耕垂直领域的原创视频品牌，海角姐姐的小飞棍官网建立了选题评审、拍摄规范与版权登记流程。从高清画质到字幕准确率，从儿童安全提示到飞行场地指引，我们以严谨态度承担社会责任，让社区在多元与包容中健康成长。
+          </p>
+        </div>
+      </div>
+      <div style="margin-top:26px;padding:20px 24px;background:#f4f8f7;border-radius:18px;border-left:6px solid var(--hj-amber);">
+        <p style="font-size:0.88rem;color:#3e5964;">
+          <strong>关键词解析（约 900 字）：</strong>「海角姐姐的小飞棍」在本文语境中，既是一个视频品牌名称，也是围绕手工飞行器与趣味影像展开的内容符号。它由三部分构成：人物标识「海角姐姐」赋予品牌亲近、可信的拟人化温度；「小飞棍」指代轻量木质或复合材料飞行器，强调手工、轻盈与可玩性；「在线观看」则直接指向视频平台的观看场景，说明官网的核心功能是高清内容的承载与分发。理解这组关键词，需要从制作、内容、社区与观看体验四个层面展开。
+        </p>
+        <p style="font-size:0.88rem;color:#3e5964;margin-top:12px;">
+          在制作层面，小飞棍并不是标准化工业产品，而是高度依赖手工校准的创作对象。机翼弧度、配重位置、打磨精度都会直接影响飞行表现，这使得相关教程必须具体到工具与步骤，也解释了为何海角姐姐的小飞棍视频中大量出现测量、打磨与试飞画面。内容层面，品牌以真实记录为核心，把失败与调整一并呈现，既降低新手畏难情绪，也建立可信赖的专业形象。社区层面，观看行为不是单向消费，观众可以通过点赞、收藏、评论与投稿参与共创，形成持续运转的内容生态。观看体验层面，官网强调高清、正版与官方发布，确保用户看到的是完整、稳定、可追溯的影像内容，而非零散片段。正因如此，海角姐姐的小飞棍在线观看更接近一次完整的品牌内容体验，而不是单支视频的偶然浏览。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S5 创作者矩阵 -->
+<section class="hj-section hj-section-alt" id="hj-creators">
+  <div class="hj-container">
+    <div class="hj-section-head">
+      <div>
+        <div class="hj-eyebrow">创作者 · 官方矩阵</div>
+        <h2 class="hj-section-title">海角姐姐的小飞棍创作者名录</h2>
+      </div>
+      <p class="hj-section-desc">来自不同背景的创作者，共同构成品牌内容生态的多元面貌。</p>
+    </div>
+    <div class="hj-author-grid">
+      <article class="hj-author-card">
+        <div class="hj-avatar">海</div>
+        <h3>海角姐姐</h3>
+        <div class="hj-author-field">飞行试验 · 品牌主理人</div>
+        <p class="hj-author-bio">海角姐姐的小飞棍品牌发起人，专注手工飞行器设计与影像记录。擅长把复杂的空气动力原理讲得轻松好懂，镜头里总带着海风与日常生活感。她坚持所有内容亲测实拍，用真实试飞过程陪伴社区成长。</p>
+        <div class="hj-author-meta"><span>作品 326</span><span>粉丝 18.6万</span></div>
+        <button class="hj-author-btn hj-btn-outline" style="font-size:0.78rem;padding:6px 18px;" data-author="海角姐姐：品牌主理人，擅长飞行试验与新手教程。">查看档案</button>
+      </article>
+      <article class="hj-author-card">
+        <div class="hj-avatar">风</div>
+        <h3>风羽实验室</h3>
+        <div class="hj-author-field">深度测评 · 数据复盘</div>
+        <p class="hj-author-bio">由两位高校航模社成员组成的内容小组，擅长用表格、对照实验和慢动作镜头解释飞行表现差异。他们的测评以严谨见长，深受进阶玩家信赖，是品牌社区里口碑稳居前列的专业创作者。</p>
+        <div class="hj-author-meta"><span>作品 148</span><span>粉丝 9.2万</span></div>
+        <button class="hj-author-btn hj-btn-outline" style="font-size:0.78rem;padding:6px 18px;" data-author="风羽实验室：深度测评小组，专注数据化飞行表现分析。">查看档案</button>
+      </article>
+      <article class="hj-author-card">
+        <div class="hj-avatar">剪</div>
+        <h3>小棍剪辑室</h3>
+        <div class="hj-author-field">创作幕后 · 影像表达</div>
+        <p class="hj-author-bio">专注短片剪辑与镜头语言的幕后创作者，长期记录品牌拍摄现场。喜欢分享分镜思路、调色参数与音效设计细节，让观众看到一支短片背后的耐心与创意，也帮助新手提升影像完成度。</p>
+        <div class="hj-author-meta"><span>作品 97</span><span>粉丝 6.4万</span></div>
+        <button class="hj-author-btn hj-btn-outline" style="font-size:0.78rem;padding:6px 18px;" data-author="小棍剪辑室：幕后剪辑创作者，分享分镜与调色经验。">查看档案</button>
+      </article>
+      <article class="hj-author-card">
+        <div class="hj-avatar">慢</div>
+        <h3>慢镜小组</h3>
+        <div class="hj-author-field">治愈影像 · 海岸日常</div>
+        <p class="hj-author-bio">由三位喜欢在海边散步的摄影爱好者组成，擅长无对白影像与自然声场记录。他们用慢节奏镜头呈现小飞棍与海岸的关系，作品被社区观众称为「适合反复播放的安静角落」。</p>
+        <div class="hj-author-meta"><span>作品 64</span><span>粉丝 4.1万</span></div>
+        <button class="hj-author-btn hj-btn-outline" style="font-size:0.78rem;padding:6px 18px;" data-author="慢镜小组：治愈影像创作者，专注海岸日常与自然声场。">查看档案</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S6 评分摘要 + 双列短评 -->
+<section class="hj-section" id="hj-reviews">
+  <div class="hj-container">
+    <div class="hj-section-head">
+      <div>
+        <div class="hj-eyebrow">用户评价 · 口碑沉淀</div>
+        <h2 class="hj-section-title">社区怎么说海角姐姐的小飞棍</h2>
+      </div>
+      <p class="hj-section-desc">来自真实用户的观看与创作反馈，是我们持续迭代的依据。</p>
+    </div>
+
+    <div class="hj-rating-summary">
+      <div>
+        <div class="hj-rating-big">4.9</div>
+        <div class="hj-rating-stars">★★★★★</div>
+        <div style="font-size:0.76rem;color:#7a8d97;">基于 3,268 条社区评价</div>
+      </div>
+      <div class="hj-rating-bars">
+        <div class="hj-rating-bar-row"><span>内容质量</span><div class="hj-rating-bar-track"><div class="hj-rating-bar-fill" style="width:96%;"></div></div><span>96%</span></div>
+        <div class="hj-rating-bar-row"><span>教程实用度</span><div class="hj-rating-bar-track"><div class="hj-rating-bar-fill" style="width:93%;"></div></div><span>93%</span></div>
+        <div class="hj-rating-bar-row"><span>社区氛围</span><div class="hj-rating-bar-track"><div class="hj-rating-bar-fill" style="width:95%;"></div></div><span>95%</span></div>
+        <div class="hj-rating-bar-row"><span>画面观感</span><div class="hj-rating-bar-track"><div class="hj-rating-bar-fill" style="width:97%;"></div></div><span>97%</span></div>
+      </div>
+    </div>
+
+    <div class="hj-comment-grid">
+      <article class="hj-comment-card">
+        <div class="hj-comment-head">
+          <div class="hj-comment-avatar">林</div>
+          <div><div class="hj-comment-name">林间散步</div><div class="hj-comment-date">2026-11-18</div></div>
+        </div>
+        <p class="hj-comment-text">按新手第一课买了第一支小飞棍，周末在公园试飞居然一次成功。教程里关于配重和手腕发力的细节特别有用，不是那种看完了还是不会的空话。</p>
+      </article>
+      <article class="hj-comment-card">
+        <div class="hj-comment-head">
+          <div class="hj-comment-avatar">阿</div>
+          <div><div class="hj-comment-name">阿澄的工坊</div><div class="hj-comment-date">2026-11-15</div></div>
+        </div>
+        <p class="hj-comment-text">做手工七年，很少见到愿意把失败镜头剪进正片的创作者。风羽实验室那期横评我看了三遍，数据表格直接截图存进笔记，太实用了。</p>
+      </article>
+      <article class="hj-comment-card">
+        <div class="hj-comment-head">
+          <div class="hj-comment-avatar">周</div>
+          <div><div class="hj-comment-name">周末飞行计划</div><div class="hj-comment-date">2026-11-11</div></div>
+        </div>
+        <p class="hj-comment-text">画面真的很舒服，尤其日落飞行那支，声音部分处理得很好，能听见风声和远处海浪，看完整个人都安静下来了。希望多出这类长镜头。</p>
+      </article>
+      <article class="hj-comment-card">
+        <div class="hj-comment-head">
+          <div class="hj-comment-avatar">陈</div>
+          <div><div class="hj-comment-name">陈叔的老收藏盒</div><div class="hj-comment-date">2026-11-08</div></div>
+        </div>
+        <p class="hj-comment-text">谢谢你们来家里拍那期访谈。我玩了三十多年航模，第一次觉得自己的故事被认真对待。小飞棍社区对老玩家的尊重，让我愿意一直留下来。</p>
+      </article>
+      <article class="hj-comment-card">
+        <div class="hj-comment-head">
+          <div class="hj-comment-avatar">木</div>
+          <div><div class="hj-comment-name">木木妈妈</div><div class="hj-comment-date">2026-11-05</div></div>
+        </div>
+        <p class="hj-comment-text">带孩子一起看了亲子共创那期，材料都是家里能找到的，安全性也讲得清楚。孩子做完之后特别得意，现在每天放学都问什么时候再飞一次。</p>
+      </article>
+      <article class="hj-comment-card">
+        <div class="hj-comment-head">
+          <div class="hj-comment-avatar">第</div>
+          <div><div class="hj-comment-name">第一视角收集者</div><div class="hj-comment-date">2026-10-30</div></div>
+        </div>
+        <p class="hj-comment-text">制作上没得挑，但希望以后能多一些不同地形的试飞，比如山地或城市天台。现在海岸线内容虽然好，看多了也想看点新的环境。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S7 企业动态 + 合作品牌 + FAQ -->
+<section class="hj-section hj-section-alt" id="hj-updates">
+  <div class="hj-container">
+    <div class="hj-section-head">
+      <div>
+        <div class="hj-eyebrow">企业动态 · 官方发布</div>
+        <h2 class="hj-section-title">海角姐姐的小飞棍最新资讯</h2>
+      </div>
+      <p class="hj-section-desc">品牌公告、内容更新与社区活动，均在此同步发布。</p>
+    </div>
+    <div class="hj-news-grid" style="margin-bottom:52px;">
+      <article class="hj-news-card">
+        <div class="hj-news-date">2026-11-20</div>
+        <h3>第二季飞行实验室定档</h3>
+        <p>「海岸线飞行实验室」第二季将于 12 月 5 日上线，新增 6 支试飞短片与配套图文笔记。</p>
+      </article>
+      <article class="hj-news-card">
+        <div class="hj-news-date">2026-11-12</div>
+        <h3>社区共创挑战开放报名</h3>
+        <p>「最稳的一次落地」主题征集启动，投稿通道开放至 12 月 20 日，欢迎所有创作者参与。</p>
+      </article>
+      <article class="hj-news-card">
+        <div class="hj-news-date">2026-11-03</div>
+        <h3>官网内容索引升级</h3>
+        <p>视频页新增标签筛选与作者直达入口，高清片源加载速度优化，观看体验更稳定。</p>
+      </article>
+      <article class="hj-news-card">
+        <div class="hj-news-date">2026-10-28</div>
+        <h3>与三家手作工坊达成合作</h3>
+        <p>品牌与本地木作、涂料与影像器材伙伴建立长期合作，为创作者提供更可靠的制作支持。</p>
+      </article>
+    </div>
+
+    <div style="margin-bottom:52px;">
+      <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;text-align:center;">海角姐姐的小飞棍合作伙伴</h3>
+      <div class="hj-partner-row">
+        <span class="hj-partner-item">岸木工坊</span>
+        <span class="hj-partner-item">潮汐涂料</span>
+        <span class="hj-partner-item">慢帧影像器材</span>
+        <span class="hj-partner-item">海风社区中心</span>
+        <span class="hj-partner-item">轻羽材料研究社</span>
+      </div>
+    </div>
+
+    <div id="hj-faq">
+      <h2 class="hj-section-title" style="text-align:center;margin-bottom:28px;">关于海角姐姐的小飞棍常见问题</h2>
+      <div class="hj-faq-list">
+        <details class="hj-faq-item">
+          <summary>海角姐姐的小飞棍官网的内容是免费观看的吗？</summary>
+          <p>官网大部分原创短片与教程对社区用户免费开放，高清正片需登录后观看。品牌承诺不设置强制付费墙，并持续通过官方发布渠道更新内容索引。</p>
+        </details>
+        <details class="hj-faq-item">
+          <summary>新手没有基础，能跟上视频教程吗？</summary>
+          <p>可以。品牌教程从工具认识、材料选择讲起，配有单独的新手第一课系列，并附常见问题清单。建议按播放列表顺序观看，边看边动手练习。</p>
+        </details>
+        <details class="hj-faq-item">
+          <summary>如何向海角姐姐的小飞棍投稿？</summary>
+          <p>点击页面中的投稿入口，填写作品标题、简介与创作说明，上传成片或样片链接即可。投稿需为原创作品，审核周期通常为 5 至 7 个工作日。</p>
+        </details>
+        <details class="hj-faq-item">
+          <summary>小飞棍适不适合儿童参与制作？</summary>
+          <p>部分亲子共创内容适合在成人陪同下开展。涉及刀具、胶水与喷涂的步骤须由成人完成。每支相关视频的开头均附有安全提示，请务必阅读后再动手。</p>
+        </details>
+        <details class="hj-faq-item">
+          <summary>视频中的飞行场地在哪里，可以去现场观看吗？</summary>
+          <p>多数外景拍摄于社区合作海岸场地，具体位置因拍摄计划调整。品牌会不定期在官方动态中公布线下展映与体验活动，可通过活动页报名。</p>
+        </details>
+        <details class="hj-faq-item">
+          <summary>怎样加入海角姐姐的小飞棍创作者矩阵？</summary>
+          <p>在官网提交创作者申请，附上代表作品与创作方向说明。社区审核团队将结合内容质量、原创性与社区贡献综合评估，入选后会安排专属内容对接。</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="hj-footer">
+  <div class="hj-container">
+    <div class="hj-footer-grid">
+      <div class="hj-footer-brand">
+        <h4>海角姐姐的小飞棍</h4>
+        <p>海角姐姐的小飞棍官方网站 · 原创手工飞行器视频品牌。我们以匠心记录每一次飞行，以社区陪伴每一位创作者成长，持续运营值得信赖的精品内容生态。</p>
+      </div>
+      <div class="hj-footer-col">
+        <h5>内容导航</h5>
+        <ul>
+          <li><a href="#hj-focus">焦点推荐</a></li>
+          <li><a href="#hj-videos">最新视频</a></li>
+          <li><a href="#hj-topics">专题企划</a></li>
+          <li><a href="#hj-creators">创作者名录</a></li>
+        </ul>
+      </div>
+      <div class="hj-footer-col">
+        <h5>参与社区</h5>
+        <ul>
+          <li><a href="#hj-reviews">用户评价</a></li>
+          <li><a href="#hj-faq">常见问题</a></li>
+          <li><a href="#hj-updates">企业动态</a></li>
+          <li><a href="#hj-home">回到首页</a></li>
+        </ul>
+      </div>
+      <div class="hj-footer-col">
+        <h5>官方渠道</h5>
+        <ul>
+          <li><a href="#hj-home">品牌主页</a></li>
+          <li><a href="#hj-topics">品牌故事</a></li>
+          <li><a href="#hj-updates">合作洽谈</a></li>
+          <li><a href="#hj-focus">投稿入口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hj-footer-bottom">
+      <span>© 2026 海角姐姐的小飞棍 官方网站 版权所有 · 持续运营中</span>
+      <span>内容均为原创正版 · 高清片源 · 社区内容生态</span>
+    </div>
+  </div>
+</footer>
+
+<button class="hj-scroll-top" id="hjScrollTop" aria-label="回到顶部">↑</button>
+<div class="hj-toast" id="hjToast" role="status" aria-live="polite"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- 移动端导航折叠 ----------
+  var navToggle = document.getElementById('hjNavToggle');
+  var mainNav = document.getElementById('hjMainNav');
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', function() {
+      var open = mainNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.textContent = open ? '✕ 收起' : '☰ 菜单';
+    });
+    mainNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 900) {
+          mainNav.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.textContent = '☰ 菜单';
+        }
+      });
+    });
+  }
+
+  // ---------- Toast ----------
+  var toast = document.getElementById('hjToast');
+  var toastTimer = null;
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 2200);
+  }
+
+  // ---------- 搜索反馈 ----------
+  var searchInput = document.getElementById('hjSearchInput');
+  var searchBtn = document.getElementById('hjSearchBtn');
+  function doSearch() {
+    var q = (searchInput && searchInput.value || '').trim();
+    if (!q) {
+      showToast('请输入关键词，例如「新手」「试飞」「涂装」');
+      if (searchInput) searchInput.focus();
+      return;
+    }
+    showToast('正在为你查找「' + q + '」相关内容…');
+    setTimeout(function() {
+      showToast('已定位到相关内容板块，可继续浏览视频列表');
+    }, 900);
+  }
+  if (searchBtn) searchBtn.addEventListener('click', doSearch);
+  if (searchInput) {
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+    });
+  }
+
+  // ---------- 点赞 ----------
+  document.querySelectorAll('.hj-like-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var countEl = btn.querySelector('.hj-like-count');
+      if (!countEl) return;
+      var base = parseInt(btn.getAttribute('data-base') || '0', 10);
+      var active = btn.getAttribute('data-liked') === '1';
+      var current = active ? base : base + 1;
+      btn.setAttribute('data-liked', active ? '0' : '1');
+      countEl.textContent = formatCount(current);
+      btn.style.color = active ? '' : '#d95d39';
+      showToast(active ? '已取消点赞' : '感谢你的点赞支持');
+    });
+  });
+
+  function formatCount(num) {
+    if (num >= 10000) {
+      return (Math.round(num / 1000) / 10).toFixed(1).replace('.0', '') + '万';
+    }
+    return num.toLocaleString('zh-CN');
+  }
+
+  // ---------- 收藏 ----------
+  document.querySelectorAll('.hj-fav-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var isFav = btn.classList.toggle('is-fav');
+      var icon = btn.querySelector('.hj-fav-icon');
+      if (icon) icon.textContent = isFav ? '已收藏' : '收藏';
+      showToast(isFav ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  // ---------- 评论展开 ----------
+  document.querySelectorAll('.hj-comment-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var key = btn.getAttribute('data-comment');
+      showToast('已展开视频「' + key + '」的社区评论面板');
+    });
+  });
+
+  // ---------- 复制链接 ----------
+  document.querySelectorAll('.hj-copy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-copy') || '';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          showToast('链接已复制，可分享给好友');
+        }).catch(function() {
+          showToast('链接已就绪，请手动复制');
+        });
+      } else {
+        showToast('链接已就绪，请手动复制');
+      }
+    });
+  });
+
+  // ---------- 作者信息弹窗 ----------
+  document.querySelectorAll('.hj-author-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var info = btn.getAttribute('data-author') || '创作者信息';
+      showToast(info);
+    });
+  });
+
+  // ---------- 投稿入口 ----------
+  var submitBtn = document.getElementById('hjSubmitEntry');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function() {
+      showToast('投稿通道已开启：请准备作品标题、简介与原创声明');
+    });
+  }
+
+  // ---------- 回到顶部 ----------
+  var scrollTopBtn = document.getElementById('hjScrollTop');
+  window.addEventListener('scroll', function() {
+    if (scrollTopBtn) {
+      scrollTopBtn.classList.toggle('show', window.scrollY > 500);
+    }
+  }, { passive: true });
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+})();
+</script>
+</body>
+  </html>
